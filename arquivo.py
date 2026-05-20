@@ -1,4 +1,4 @@
-# Entradas
+# Entradas 123
 texto_entrada = list(input(''))
 posicao_cursor = 0
 tamanho_texto = len(texto_entrada)
