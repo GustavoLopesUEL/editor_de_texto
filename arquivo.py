@@ -16,13 +16,30 @@ while True:
                 pass
         case "X":
             pass
-        case _:
+       case _:
             comando = comando.split(" ")
             match comando[0]:
                 case "E":
-                    pass
+                    nova_posicao = posicao_cursor - int(comando[1])
+                    texto_entrada.pop(posicao_cursor)
+
+                    if (nova_posicao > 0):
+                        texto_entrada.insert(nova_posicao, "|")
+                        posicao_cursor = nova_posicao
+                    else:
+                        texto_entrada.insert(0, "|")
+                        posicao_cursor = 0
                 case "D":
-                    pass
+                    nova_posicao = posicao_cursor + int(comando[1])
+                    texto_entrada.pop(posicao_cursor)
+
+                    if (nova_posicao < tamanho_texto):
+                        texto_entrada.insert(nova_posicao, "|")
+                        posicao_cursor = nova_posicao
+                    else:
+                        texto_entrada.append("|")
+                        print(texto_entrada)
+                        posicao_cursor = tamanho_texto
                 case "I":
                     pass
                 case "i":
