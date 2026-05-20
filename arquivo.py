@@ -1,7 +1,9 @@
+# Entradas
 texto_entrada = list(input(''))
 posicao_cursor = 0
 tamanho_texto = len(texto_entrada)
 texto_entrada.insert(posicao_cursor, "|")
+#Casos
 while True:
     comando = input('')
     match comando:
