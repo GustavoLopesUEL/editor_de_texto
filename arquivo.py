@@ -8,7 +8,10 @@ while True:
         case "F":
             break
         case "x":
-            pass
+            if posicao_cursor < tamanho_texto:
+                texto_entrada.pop(posicao_cursor + 1)
+            else: 
+                pass
         case "X":
             pass
         case _:
@@ -21,7 +24,9 @@ while True:
                 case "I":
                     pass
                 case "i":
-                    pass
+                    caracter = comando[1]
+                    texto_entrada.insert(posicao_cursor, caracter)
+                    posicao_cursor += 1
 texto_entrada.pop(posicao_cursor)
 conversao_lista_para_texto = ""
 for i in texto_entrada:
