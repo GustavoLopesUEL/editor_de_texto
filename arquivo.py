@@ -28,6 +28,7 @@ while True:
                 case "i":
                     caracter = comando[1]
                     texto_entrada.insert(posicao_cursor, caracter)
+                    tamanho_texto += 1
                     posicao_cursor += 1
 texto_entrada.pop(posicao_cursor)
 conversao_lista_para_texto = ""
