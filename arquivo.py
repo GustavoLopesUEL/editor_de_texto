@@ -41,7 +41,16 @@ while True:
                         print(texto_entrada)
                         posicao_cursor = tamanho_texto
                 case "I":
-                    pass
+                case "I":
+                    palavra = list(comando[1])
+                    if posicao_cursor != 0:
+                        palavra.insert(0, " ")
+                    texto_entrada.pop(posicao_cursor)
+                    for i, v in enumerate(palavra):
+                        texto_entrada.insert(posicao_cursor + i, v)
+                    tamanho_texto += len(palavra)
+                    posicao_cursor += len(palavra)
+                    texto_entrada.insert(posicao_cursor, "|")
                 case "i":
                     caracter = comando[1]
                     texto_entrada.insert(posicao_cursor, caracter)
